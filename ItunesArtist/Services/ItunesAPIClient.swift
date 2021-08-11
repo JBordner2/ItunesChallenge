@@ -8,14 +8,14 @@
 import Foundation
 
 protocol ItunesAPIProtocol {
-    func retrieveData(for searchTerm: String, completion: @escaping(_ retrievedData: [AlbumModel]) -> Void)
+    func retrieveData(for searchTerm: String, url: URL, completion: @escaping(_ retrievedData: [AlbumModel]) -> Void)
 }
 
 class ItunesAPIClient: ItunesAPIProtocol {
     
     public init() { }
     
-    public func retrieveData(for searchTerm: String, completion: @escaping(_ retrievedData: [AlbumModel]) -> Void) {
+    public func retrieveData(for searchTerm: String, url: URL, completion: @escaping(_ retrievedData: [AlbumModel]) -> Void) {
         
         var returnedData = [AlbumModel]()
         
